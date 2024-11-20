@@ -141,12 +141,10 @@ const ActivityForm = () => {
       selectedImages.forEach((image) => {
         form.append("images", image);
       });
-      console.log(formData,"form")
       const response = await axios.post("http://127.0.0.1:4001/tours/activity", form, {
         headers: { "Content-Type": "multipart/form-data" },
       });
 
-      console.log("Response:", response.data);
       alert("Activity created successfully!");
     } catch (error) {
       console.error("Error:", error.response?.data || error.message);

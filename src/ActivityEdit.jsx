@@ -15,7 +15,6 @@ const EditActivityForm = ({ activity, onClose }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Here you can send the updated activity data to your API or backend service
-    console.log("Updated activity data:", formData);
     onClose();  // Close the form after submit
   };
 
